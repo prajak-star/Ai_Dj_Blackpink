@@ -1,0 +1,26 @@
+body{
+    background: url("https://freerangestock.com/sample/52493/purple-soundwaves-background-shows-dj-music-and-songs-.jpg");
+    background-repeat:cover;
+}
+#catty{
+    width: 80px;
+}
+.wristo{
+    width: 90px;
+    height: 90px;
+}
+#speaker{
+    margin-top: 60px;
+    float: right;
+}
+#car{
+    margin-top: 60px;
+    float: left;
+}
+h3{
+    color: aliceblue;
+}
+canvas{
+    border:5px solid black;
+    margin-top: 150px;
+}
