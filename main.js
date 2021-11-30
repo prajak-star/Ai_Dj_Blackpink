@@ -1,12 +1,15 @@
-leftwristx="0";
-leftwristy="0";
-rightwristx="0";
-rightwristy="0";
-scorlef="0";
-scorrig="0";
+leftwristx=0;
+leftwristy=0;
+rightwristx=0;
+rightwristy=0;
+scorlef=0;
+scorrig=0;
 crazyoveryou=" ";
 readyforlove=" ";
 bpmage=" ";
+
+statusrfl=" ";
+statuscoy=" ";
 
 function preload(){
     bpmage=loadImage("b.png");
@@ -41,5 +44,27 @@ function bring(results){
 
 function draw(){
     image(video,0,0,600,400);
-    image(bpmage,rightwristx,rightwristy,20,20);
+
+    statusrfl=readyforlove.isPlaying();
+    statuscoy=crazyoveryou.isPlaying();
+
+    if(scorerig>0.2){
+        image(bpmage,rightwristx,rightwristy,20,20);
+        crazyoveryou.stop();
+        if (statusrfl==false) {
+            readyforlove.play();
+            console.log("ready for love playing");
+            document.getElementById("playtime").innerHTML="Ready For Love";
+        }
+    }
+
+    if(scorelef>0.2){
+        image(bpmage,leftwristx,leftwristy,20,20);
+        readyforlove.stop();
+        if (statuscoy==false) {
+            crazyoveryou.play();
+            console.log("crazy over you playing");
+            document.getElementById("playtime").innerHTML="crazy over you";
+        }
+    }
 }
